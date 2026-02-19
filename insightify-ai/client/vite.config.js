@@ -1,19 +1,6 @@
-import { VitePWA } from 'vite-plugin-pwa'
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-plugins: [
-  VitePWA({
-    registerType: 'autoUpdate',
-    manifest: {
-      name: 'Insightify AI',
-      short_name: 'Insightify',
-      theme_color: '#111827',
-      icons: [
-        {
-          src: '/icon.png',
-          sizes: '192x192',
-          type: 'image/png'
-        }
-      ]
-    }
-  })
-]
+export default defineConfig({
+  plugins: [react()],
+})

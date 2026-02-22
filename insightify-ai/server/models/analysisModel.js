@@ -2,33 +2,33 @@ import mongoose from "mongoose";
 
 const analysisSchema = new mongoose.Schema(
   {
-    imageUrl: {
-      type: String,
+    imageUrl: String,
+    link: String,
+    text: String,
+    title: String,
+    category: String,
+    summary: String,
+    estimatedPrice: String,
+    confidence: String,
+
+    pros: [String],
+    cons: [String],
+
+    targetAudience: {
+      primary: String,
+      secondary: String,
+      demographics: String,
+      behavioralProfile: String
     },
-    link: {
-      type: String,
+
+    marketPosition: {
+      priceTier: String,
+      brandStrength: String,
+      competitiveAdvantage: String,
+      growthPotential: String
     },
-    text: {
-      type: String,
-    },
-    title: {
-      type: String,
-    },
-    category: {
-      type: String,
-    },
-    summary: {
-      type: String,
-    },
-    estimatedPrice: {
-      type: String,
-    },
-    features: {
-      type: [String],
-    },
-    confidence: {
-      type: String,
-    },
+
+    relatedImages: [String]
   },
   { timestamps: true }
 );
